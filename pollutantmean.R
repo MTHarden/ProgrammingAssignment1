@@ -18,8 +18,8 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   ## sprintf %03d pads leading zeros to id if it has less than 3 digits.
   ## header identifes the first row from each csv as a header
   APData <- data.frame()
-  for(file in rep(id)){
-    APData<-rbind(APData,read.table(paste(directory,"/",sprintf("%03d", file),".csv",sep=""),sep=",",header=TRUE))
+  for (file in rep(id)) {
+    APData<-rbind(APData,read.table(paste(directory,"/",sprintf("%03d", file),".csv",sep = ""),sep = ",",header = TRUE))
   }
   ## Calculate the mean
   ## Round to three decimal places
